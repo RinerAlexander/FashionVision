@@ -36,6 +36,7 @@ def upload_picture():
         im = image.load_img("input.jpg", target_size=(28,28), color_mode="grayscale")
         pixel_array = img_to_array(im)
         pixel_array /= 255
+        pixel_array = (pixel_array-1)*-1
         pixel_array = np.expand_dims(pixel_array, axis = 0)
         print(pixel_array)
         
