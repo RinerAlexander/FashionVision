@@ -22,6 +22,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 model = load_model ("filename2.h5")
+class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 @app.route("/", methods=["GET", "POST"])
 def upload_picture():
@@ -31,11 +32,15 @@ def upload_picture():
 
         picture = request.files["image"]
         picture.save("input.jpg")
-
+        
         im = image.load_img("input.jpg", target_size=(28,28), color_mode="grayscale")
         pixel_array = img_to_array(im)
         pixel_array /= 255
-        answer=model.predict_classes(pixel_array)
+        pixel_array = np.expand_dims(pixel_array, axis = 0)
+        print(pixel_array)
+        
+        answer=model.predict_classes(pixel_array)[0]
+        answer=class_names[answer]
 
         return render_template("file_upload_test.html",picture="input",message=answer)
         
