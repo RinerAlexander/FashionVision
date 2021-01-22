@@ -18,7 +18,6 @@ from keras.models import load_model
 
 from werkzeug.utils import secure_filename
 
-from PIL import Image 
 
 app = Flask(__name__)
 
@@ -45,7 +44,7 @@ def upload_picture():
 
 @app.route("/input")
 def input():
-    return send_from_directory("input.jpg")
+    return send_from_directory("","input.jpg")
 
 if __name__ == "__main__":
     app.run(debug=True)
