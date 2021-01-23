@@ -19,6 +19,22 @@
 		vertical-align: baseline;
 	}
 
+	.gallery { 
+		margin: 10px 40px;
+    } 
+      
+    .gallery img { 
+        width: 200px; 
+        height: 200px; 
+        transition: 1s; 
+        padding: 5px; 
+    } 
+      
+    .gallery img:hover { 
+        filter: drop-shadow(4px 4px 6px gray); 
+        transform: scale(1.1); 
+    }
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
