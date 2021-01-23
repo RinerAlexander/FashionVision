@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+	<title>FashionVision</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../static/assets/css/main.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html" class="logo">Rice Data Analytics Bootcamp 2020</a>
+			<nav id="nav">
+				<a href="index.html">Home</a>
+				<a href="visual.html">Visualizations</a>
+				<a href="gallery.html">Gallery</a>
+				<a href="imageUpload.html">Photo Submission</a>
+				<a href="model.html">Our Model</a>
+			</nav>
+			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+		</div>
+	</header>
+
+	<!-- Banner -->
+	<section id="banner">
+		<h1>What's in your closet?</h1>
+		<p>Digitize your wardrobe and find the best outfit for you</p>
+	</section>
+
+	<section id="three" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h2>Our Inspiration</h2>
+				<!-- <p>Aliquam erat volutpat nam dui </p> -->
+			</header>
+			<p>Time is precious and we do not always have the time to look nice. Sometimes, you just throw on whatever
+				you can find in your closet without a second thought. That is where closet apps come in. There are many
+				closets apps available on mobile and digital platform that offer us the promise to organize your
+				wardrobe for easy visibility, plan daily outfits, and track clothing use to declutter your closet by
+				identifying clothes rarely worn. </p>
+			<p>However, when examining the top 5 closet apps in the Apple App store, the ability to mass upload pictures
+				of clothing has yet to be explored. In order to initialize the app, the user has to manually classify
+				each item via tags then separate them into their respective clothing category. But what if we can use
+				Machine Learning to automate this process and prepare the application in minutes rather than hours? Cue
+				in Fashion-MNIST!</p>
+			<p></p>
+			<header class="align-center">
+				<h2>The Data</h2>
+				<!-- <p>Aliquam erat volutpat nam dui </p> -->
+			</header>
+			<p>Within the data science community, the exploration of fashion classification through machine learning has
+				been one of great interest. For this reason, professors in the data science and analytics field
+				leveraged the idea of the well-loved digit dataset, MNIST, and developed their own MNIST specifically
+				for fashion clothing identification. </p>
+			<p></p>
+			<p><i>“Fashion-MNIST is a dataset of Zalando’s article images consisting of a training set of 60,000 examples
+				and a test set of 10,000 examples. Each example is a 28×28 grayscale image, associated with a label from
+				10 classes. Fashion-MNIST is intended to serve as a direct drop-in replacement of the original MNIST
+				dataset for benchmarking machine learning algorithms”</i></p>
+			<p>Source: Zalando Research URL: </p>
+			<p>Despite using Fashion-MNIST to test and train our model, we wanted to use our model for real-world
+				applications. Therefore, for our predictions, we randomly selected 50 images from various online
+				clothing stores.</p>
+			<!-- <div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<img src="images/pic01.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<h3>Praesent placerat magna</h3>
+							</header>
+							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image fit">
+								<img src="images/pic02.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Fusce pellentesque tempus</h3>
+							</header>
+							<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+					</div> -->
+		</div>
+	</section>
+
+	<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<header>
+				<h2>Group 8 Fashion Vision</h2>
+				<p>Team Members</p>
+			</header>
+			<div class="flex flex-4">
+				<div class="box person">
+					<div class="image round">
+						<img src="../static/images/pic03.jpg" alt="Person 1" />
+					</div>
+					<h3>Tobias Judd</h3>
+					<!-- <p>Cipdum dolor</p> -->
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="../static/images/pic04.jpg" alt="Person 2" />
+					</div>
+					<h3>Patricia Mobolade</h3>
+					<!-- <p>Vestibulum comm</p> -->
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="../static/images/pic05.jpg" alt="Person 3" />
+					</div>
+					<h3>Alexander Riner</h3>
+					<!-- <p>Fusce pellentes</p> -->
+				</div>
+				<div class="box person">
+					<div class="image round">
+						<img src="../static/images/pic06.jpeg" alt="Person 4" />
+					</div>
+					<h3>David Martinez</h3>
+					<!-- <p>Praesent placer</p> -->
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Three -->
+	<section id="three" class="wrapper special">
+		<div class="inner">
+			<header class="align-center">
+				<h2>See How It Works</h2>
+				<!-- <p>Aliquam erat volutpat nam dui </p> -->
+			</header>
+			<div class="flex flex-2">
+				<article>
+					<div class="image fit">
+						<img src="../static/images/pic01.jpg" alt="Pic 01" />
+					</div>
+					<header>
+						<h3>View our demo photo gallery</h3>
+					</header>
+					<!-- <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p> -->
+					<footer>
+						<a href="gallery.html" class="button special">More</a>
+					</footer>
+				</article>
+				<article>
+					<div class="image fit">
+						<img src="../static/images/pic02.jpg" alt="Pic 02" />
+					</div>
+					<header>
+						<h3>Submit photos from your closet</h3>
+					</header>
+					<!-- <p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p> -->
+					<footer>
+						<a href="imageUpload.html" class="button special">More</a>
+					</footer>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<div class="flex">
+				<div class="copyright">
+					&copy; Rice Data Bootcamp Group 8 FashionVision
+				</div>
+				<!-- <ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
+							<li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul> -->
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="../static/assets/js/jquery.min.js"></script>
+	<script src="../static/assets/js/skel.min.js"></script>
+	<script src="../static/assets/js/util.js"></script>
+	<script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>

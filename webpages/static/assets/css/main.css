@@ -19,6 +19,23 @@
 		vertical-align: baseline;
 	}
 
+	.grid { 
+		margin: 10px 40px;
+		column-count:5;
+    } 
+      
+    .grid img { 
+        width: 190px; 
+        height: 230px; 
+        transition: 1s; 
+        padding: 5px; 
+    } 
+      
+    .grid img:hover { 
+        filter: drop-shadow(4px 4px 6px gray); 
+        transform: scale(1.1); 
+    }
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -1633,7 +1650,7 @@
 		}
 
 	a {
-		color: #5385c1;
+		color: #17202A;
 		text-decoration: underline;
 	}
 
@@ -1655,7 +1672,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #5385c1;
+		color: #17202A;
 		font-weight: 300;
 		line-height: 1.5;
 		margin: 0 0 1em 0;
@@ -1805,7 +1822,7 @@
 		}
 
 		section.wrapper.style1, article.wrapper.style1 {
-			background: #5385c1;
+			background: #17202A;
 			color: #bacee6;
 		}
 
@@ -2028,8 +2045,8 @@
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #5385c1;
-			box-shadow: 0 0 0 1px #5385c1;
+			border-color: #17202A;
+			box-shadow: 0 0 0 1px #17202A;
 		}
 
 	.select-wrapper {
@@ -2139,8 +2156,8 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #5385c1;
-			box-shadow: 0 0 0 1px #5385c1;
+			border-color: #17202A;
+			box-shadow: 0 0 0 1px #17202A;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2660,7 +2677,7 @@
 		input[type="button"].special,
 		button.special,
 		.button.special {
-			background-color: #5385c1;
+			background-color: #17202A;
 			color: #ffffff !important;
 		}
 
@@ -2716,7 +2733,7 @@
 	}
 
 		.subpage #header {
-			background: #5385c1;
+			background: #17202A;
 			top: 0;
 			height: 44px;
 			line-height: 44px;
@@ -2855,7 +2872,7 @@
 		position: fixed;
 		right: 0;
 		top: 0;
-		background: #5385c1;
+		background: #17202A;
 		color: #d4e0ef;
 		height: 100%;
 		max-width: 80%;
@@ -2940,7 +2957,7 @@
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 		text-align: center;
-		border-top: 0.5em solid #5385c1;
+		border-top: 0.5em solid #17202A;
 	}
 
 		#banner h1 {

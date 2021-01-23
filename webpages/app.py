@@ -24,7 +24,11 @@ app = Flask(__name__)
 model = load_model ("EPOCH60ver2.h5")
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/upload_picture", methods=["GET", "POST"])
 def upload_picture():
 
     if request.method == "POST":
@@ -63,6 +67,26 @@ def upload_picture():
 @app.route("/input/<file>")
 def input(file):
     return send_from_directory("",f"{file}")
+
+@app.route("/gallery")
+def gallery():
+    return render_template("gallery.html")
+
+# @app.route("/generic")
+# def generic():
+#     return render_template("generic.html")
+
+@app.route("/model")
+def model():
+    return render_template("model.html")
+
+# @app.route("/elements")
+# def elements():
+#     return render_template("elements.html")
+
+@app.route("/visual")
+def visual():
+    return render_template("visual.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
