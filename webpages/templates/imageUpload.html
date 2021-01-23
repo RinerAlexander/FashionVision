@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Image Upload</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">Theory</a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="generic.html">Generic</a>
+						<a href="elements.html">Elements</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Image Upload</h2>
+					</header>
+					<p>Here is where you can upload an image to try out the Fashion Vision model. Keep in mind that the model is very sensitive and relies on the shape of your picture to identify your clothing. With that in mind please abide by the following guidelines to help the computer accuately identify your picture.</p>
+					<div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<img src="../static/images/dress2.jpg" alt="Pic 01" style="width:300px;height:400px;"/>
+							</div>
+							<header>
+								<h3>White Background</h3>
+							</header>
+							<p>Take your picture in front of a white background with just the article you want identified.</p>
+						</article>
+						<article>
+							<div class="image fit">
+								<img src="../static/images/sandal3.jpg" alt="Pic 02" style="width:500px;height:400px;"/>
+							</div>
+							<header>
+								<h3>Capture the Shape</h3>
+							</header>
+							<p>FashionVision works by identifying the shape of your clothing, as such try to fully capture the shape in your picture for a more accurate prediciton.</p>
+						</article>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+					  <div class="col">
+				  
+						<h1>Upload an image</h1>
+						<hr>
+				  
+						<form action="/" method="POST" enctype="multipart/form-data">
+				  
+						  <div class="form-group">
+							<label>Select image</label>
+							<div class="custom-file">
+							  <input type="file" class="custom-file-input" name="image" id="image">
+							  <label class="custom-file-label" for="image">Select image...</label>
+							</div>
+						  </div>
+				  
+						  <button type="submit" class="button special">Upload</button>
+				  
+						</form>
+				  
+					  </div>
+					</div>
+					<div class="row">
+					  <div class="col">
+						<h1> {{ message }}</h1>
+						<img src={{ picture }} style="width:500px;height:600px;">
+					  </div>
+					</div> 
+				  </div>
+
+			</section>
+
+	
+
+		<!-- Scripts -->
+			<script src="../static/assets/js/jquery.min.js"></script>
+			<script src="../static/assets/js/skel.min.js"></script>
+			<script src="../static/assets/js/util.js"></script>
+			<script src="../static/assets/js/main.js"></script>
+
+	</body>
+</html>

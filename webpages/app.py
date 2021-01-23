@@ -37,6 +37,8 @@ def upload_picture():
         im = image.load_img(file_name, target_size=(28,28), color_mode="grayscale")
         pixel_array = img_to_array(im)
 
+        # this block changes the white background to a black background
+        # which is needed for accurate predictions
         for row in pixel_array:
             for pixel in row:
                 if pixel[0]>=235:
@@ -44,15 +46,19 @@ def upload_picture():
         
         pixel_array /= 255
 
+        # the model expects an array of several images so we add an extra
+        # dimension to our one image
         pixel_array = np.expand_dims(pixel_array, axis = 0)
         
+        # the model spits out a list of answers so we need to grab the 
+        # first and only answer it gives
         answer=model.predict_classes(pixel_array)[0]
         answer=class_names[answer]
 
-        return render_template("file_upload_test.html",picture=f"input/{file_name}",message=answer)
+        return render_template("imageUpload.html",picture=f"input/{file_name}",message=answer)
         
 
-    return render_template("file_upload_test.html")
+    return render_template("imageUpload.html")
 
 @app.route("/input/<file>")
 def input(file):
