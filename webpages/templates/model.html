@@ -36,28 +36,23 @@
 	<section id="three" class="wrapper">
 		<div class="inner">
 			<header class="align-center">
-				<h2>Nunc Dignissim</h2>
-				<p>Aliquam erat volutpat nam dui </p>
+				<h2>Convolutional Neural Network</h2>
+				<!-- <p>Aliquam erat volutpat nam dui </p> -->
 			</header>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-				rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-				explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-				consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-				dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-				incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-				exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-				vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-				qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-			<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-				atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-				similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
-				quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-				cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est,
-				omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
-				saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-				tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis
-				doloribus asperiores repellat.</p>
-			<div class="flex flex-2">
+			<p><span class="image right"><img src="../static/images/ex4.png" alt="" /></span>FashionVision uses a convolutional neural network, which is a standard architecture for computer vision,
+				the field of teaching computers to identify images. The program works by first turning the image into a
+				matrix of numbers, representing the pixels that make up the image. This matrix is then sent through a
+				series of convolutional and pooling layers. </p>
+			<p><span class="image left"><img src="../static/images/ex5.png" alt="" /></span>Convolutional and pooling layers both work by looking at subsets of the given matrix and giving back an
+				aggregate of those subsets. There are two benefits of looking at aggregates instead of the original
+				matrix. First, looking at smaller datasets improves run time of the model, and second, aggregates
+				capture features of multiple pixels rather than looking at pixels in isolation. Basically, these layers
+				let the computer look at lines and shapes rather than just a series of pixels. </p>
+			<p><span class="image right"><img src="../static/images/ex6.png" alt="" /></span>The features captured by the convolutional and pooling layers are then sent through a standard neural
+				network which learns which features indicate that the picture is of a shirt, shoes, dress, etc. This
+				neural network contains nodes that vote on what type of clothing they think the picture is and return
+				the category with the most votes. </p>
+			<!-- <div class="flex flex-2">
 				<article>
 					<div class="image fit">
 						<img src="../static/images/pic01.jpg" alt="Pic 01" />
@@ -84,7 +79,7 @@
 						<a href="#" class="button special">More</a>
 					</footer>
 				</article>
-			</div>
+			</div> -->
 		</div>
 	</section>
 
