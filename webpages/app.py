@@ -28,8 +28,8 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 
 def home():
     return render_template("index.html")
 
-@app.route("/upload_picture", methods=["GET", "POST"])
-def upload_picture():
+@app.route("/imageUpload", methods=["GET", "POST"])
+def imageUpload():
 
     if request.method == "POST":
         print("first")
