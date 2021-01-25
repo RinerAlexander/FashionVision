@@ -27,6 +27,10 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 
 @app.route("/")
 def home():
     return render_template("index.html")
+    
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 @app.route("/imageUpload", methods=["GET", "POST"])
 def imageUpload():
@@ -56,8 +60,10 @@ def imageUpload():
         
         # the model spits out a list of answers so we need to grab the 
         # first and only answer it gives
-        answer=model.predict_classes(pixel_array)[0]
-        answer=class_names[answer]
+        # answer=model.predict_classes(pixel_array)[0]
+        # answer=class_names[answer]
+        predictions = model.predict(pixel_array)
+        answer=class_names[np.argmax(predictions)]
 
         return render_template("imageUpload.html",picture=f"input/{file_name}",message=answer)
         
